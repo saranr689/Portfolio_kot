@@ -9,13 +9,13 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.RelativeLayout
 import android.widget.TextView
 import com.portfolio_kot.R
 
 class SkillsFragment : Fragment() {
 
-    lateinit var skillsfrg_recyclerview : RecyclerView
-
+    lateinit var skillsfrg_recyclerview: RecyclerView
 
 
     companion object {
@@ -38,33 +38,49 @@ class SkillsFragment : Fragment() {
 
 class SkillsAdapter(val context: Context?) : RecyclerView.Adapter<SkillsAdapter.MyViewHolder>() {
 
-     val skills_ttitle_list : ArrayList<String> = arrayListOf("ANDROID","JAVA","SKILLS")
+    val skills_ttitle_list: ArrayList<String> = arrayListOf("ANDROID", "JAVA", "SKILLS")
+    val skills_descp_list: ArrayList<String> = arrayListOf("COMPONENTS OF ANDROID, FRAGMENT, RETROFIT, RECYCLER VIEW, ANDROID ARCHITECT COMPONENTS,", "JAVA", "SKILLS")
+
+
 
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
 
         holder.titeltextview.text = skills_ttitle_list[position]
 
+        holder.title_layout.setOnClickListener(View.OnClickListener {
+
+            if(holder.descrb_relatvlayout.visibility == View.GONE) {
+                holder.descrb_relatvlayout.visibility = View.VISIBLE
+            }else{
+                holder.descrb_relatvlayout.visibility  = View.GONE
+            }
+
+        })
+
     }
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
-        val view  =  LayoutInflater.from(context).inflate(R.layout.skills_itemview,parent,false)
+        val view = LayoutInflater.from(context).inflate(R.layout.skills_itemview, parent, false)
 
         return MyViewHolder(view)
     }
 
     override fun getItemCount(): Int {
 
-        Log.d("_D","size : "+skills_ttitle_list.size)
+        Log.d("_D", "size : " + skills_ttitle_list.size)
         return skills_ttitle_list.size
     }
 
 
-    class MyViewHolder(  itemView : View) : RecyclerView.ViewHolder(itemView)  {
+    class MyViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        val titeltextview  = itemView.findViewById(R.id.id_title_tv) as TextView
+        val titeltextview = itemView.findViewById(R.id.id_title_tv) as TextView
+        val descrb_relatvlayout = itemView.findViewById(R.id.id_descrb_relativelayout) as RelativeLayout
+        val title_layout = itemView.findViewById(R.id.id_title_layout) as RelativeLayout
+
 
     }
 

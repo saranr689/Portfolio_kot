@@ -41,6 +41,8 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/id_descrb_relativelayout"
+            android:visibility="gone"
             android:layout_below="@+id/id_cardview_title_view"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5dp"
