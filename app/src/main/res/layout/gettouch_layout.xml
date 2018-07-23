@@ -12,7 +12,6 @@
         android:layout_margin="5dp"
         android:background="#1944c4"
         android:text="Facebook"
-
         android:textColor="#fff" />
 
     <Button
@@ -39,7 +38,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
-        android:background="#0a9700"
+        android:background="#064102"
         android:text="Whatsapp"
         android:textColor="#fff" />
 
