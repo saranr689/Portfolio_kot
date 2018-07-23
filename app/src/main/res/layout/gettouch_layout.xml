@@ -1,13 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
 
-    <TextView
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/id_connnectfb"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="get in touch"
-        android:layout_margin="10dp"/>
+        android:layout_margin="5dp"
+        android:background="#1944c4"
+        android:text="Facebook"
 
-</RelativeLayout>
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/id_connnectgithub"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#363636"
+        android:text="Github"
+
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/id_connectlinkedin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#2494df"
+        android:text="LinkedIn"
+        android:textColor="#fff" />
+
+    <Button
+        android:id="@+id/id_connectwhatsapp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="#0a9700"
+        android:text="Whatsapp"
+        android:textColor="#fff" />
+
+
+</LinearLayout>

@@ -81,7 +81,6 @@ class SkillsAdapter(val context: Context?) : RecyclerView.Adapter<SkillsAdapter.
         val descrb_relatvlayout = itemView.findViewById(R.id.id_descrb_relativelayout) as RelativeLayout
         val title_layout = itemView.findViewById(R.id.id_title_layout) as RelativeLayout
 
-
     }
 
 }
